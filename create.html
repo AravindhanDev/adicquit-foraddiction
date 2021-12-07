@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta
+			name="AdicQuit"
+			content="AdicQuit is a web application where you can commit to quitting some addiction which is lasted long for years."
+		/>
+		<meta property="og:site_name" content="AdicQuit" />
+		<meta property="og:title" content="Commit to quit addiction" />
+		<meta
+			property="og:description"
+			content="AdicQuit is a web application where you can commit to quitting some addiction which is lasted long for years."
+		/>
+		<meta
+			property="og:image"
+			content="https://st2.depositphotos.com/1041170/7070/v/950/depositphotos_70705413-stock-illustration-addict-man-and-set-of.jpg"
+		/>
+		<title>AdicQuit</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnYG9NEOMC6e96MBohit7gGG3y_bre_FbpEQ&usqp=CAU"
+		/>
+		<title>Creation</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="./dist/Full-featured-jQuery-Date-Picker-Plugin-RendezVous-js/rendezvous.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="./dist/Minimal-Notification-Plugin-With-jQuery-and-Bootstrap-Bootstrap-Msg/dist/css/bootstrap-msg.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<section id="section-create">
+			<div class="header">
+				<p class="create-head d-inline">Name and icon</p>
+			</div>
+			<div id="creation" style="margin-top: 2rem">
+				<a class="position-fixed" style="font-weight: 600" id="select-head-icon"
+					>Select the icon</a
+				>
+				<div class="select-icon">
+					<li class="dropend icon list-unstyled">
+						<a
+							style="color: #777"
+							id="navbarDropdown"
+							role="button"
+							data-bs-toggle="dropdown"
+							aria-expanded="false"
+							><i
+								class="
+									animate__animated
+									animate__pulse
+									animate__fast
+									animate__infinite
+									fab
+									fa-connectdevelop
+								"
+							></i
+						></a>
+						<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+							<span class="dropdown-item default"
+								><i class="fas fa-biohazard"></i> &nbsp; My Addiction</span
+							>
+							<span class="dropdown-item smoking"
+								><i class="fas fa-smoking"></i> &nbsp; Smoking</span
+							>
+							<span class="dropdown-item alcohol"
+								><i class="fas fa-glass-martini-alt"></i> &nbsp; Alcohol</span
+							>
+							<span class="dropdown-item drugs"
+								><i class="fas fa-syringe"></i> &nbsp; Drugs</span
+							>
+							<span class="dropdown-item pills"
+								><i class="fas fa-pills"></i> &nbsp; Pills</span
+							>
+							<span class="dropdown-item weed"
+								><i class="fas fa-cannabis"></i> &nbsp; Weed</span
+							>
+							<span class="dropdown-item porn"
+								><i class="fab fa-mixer"></i> &nbsp; Porn</span
+							>
+							<span class="dropdown-item video"
+								><i class="fas fa-gamepad"></i> &nbsp; Video Games</span
+							>
+							<span class="dropdown-item tv">
+								<i class="fas fa-tv"></i> &nbsp; Watching TV
+							</span>
+							<span class="dropdown-item shopping">
+								<i class="fas fa-money-check-alt"></i> &nbsp; Impulsive Shopping
+							</span>
+							<span class="dropdown-item facebook">
+								<i class="fab fa-facebook-square"></i> &nbsp; Facebook
+							</span>
+							<span class="dropdown-item instagram">
+								<i class="fab fa-instagram"></i> &nbsp; Instagram
+							</span>
+							<span class="dropdown-item twitter">
+								<i class="fab fa-twitter"></i> &nbsp; Twitter
+							</span>
+							<span class="dropdown-item fastfood">
+								<i class="fas fa-pizza-slice"></i> &nbsp; Fast Food
+							</span>
+							<span class="dropdown-item sugar">
+								<i class="fas fa-birthday-cake"></i> &nbsp; Sugar
+							</span>
+							<span class="dropdown-item soda">
+								<i class="fas fa-wine-bottle"></i> &nbsp; Soda
+							</span>
+							<span class="dropdown-item coffee">
+								<i class="fas fa-coffee"></i> &nbsp; Coffee
+							</span>
+							<div class="dropdown-item gambling">
+								<i class="fas fa-dice"></i> &nbsp; Gambling
+							</div>
+						</div>
+					</li>
+				</div>
+				<div
+					class="quit-input position-fixed"
+					style="margin-top: 13rem; width: 18rem"
+				>
+					<div>What addiction or bad habit do you want to quit?</div>
+					<input
+						class="name form-control mt-2"
+						type="text"
+						placeholder="Smoking"
+					/>
+				</div>
+			</div>
+			<div class="footer">
+				<a class="home" href="./index.html"
+					><i class="fas fa-home"></i> &nbsp;&nbsp;HOME</a
+				>
+				<a class="next"
+					>NEXT&nbsp;&nbsp; <i class="fas fa-hand-point-right"></i
+				></a>
+			</div>
+		</section>
+		<section id="section-date" style="display: none">
+			<div class="header">
+				<p class="create-head d-inline">Select the date</p>
+			</div>
+			<section id="creation">
+				<p style="font-size: 3rem; color: #555">
+					<i class="fas fa-stopwatch"></i>
+				</p>
+				<p>What was the last time?</p>
+				<div id="demo"></div>
+			</section>
+			<div class="footer">
+				<a class="back"
+					><i class="fas fa-hand-point-left"></i>&nbsp;&nbsp; BACK</a
+				>
+				<a class="complete">COMPLETE</a>
+			</div>
+		</section>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="./dist/Smooth-Circle-Chart-Plugin-with-jQuery-CSS3-Circle-Charts/js/jquery.circlechart.js"></script>
+		<script src="./dist/Full-featured-jQuery-Date-Picker-Plugin-RendezVous-js/rendezvous.js"></script>
+		<script src="./dist/Minimal-Notification-Plugin-With-jQuery-and-Bootstrap-Bootstrap-Msg/dist/js/bootstrap-msg.js"></script>
+		<script>
+			$("#demo").RendezVous();
+			$(".rendezvous-input-date").attr("placeholder", "Choose the date");
+
+			var theme = localStorage.getItem("theme") || "red";
+			var resArr = JSON.parse(localStorage.getItem("quitArr")) || [];
+
+			if (theme == "red") {
+				$(":root").css({ "--color-red": "#fe6367" });
+			} else if (theme == "blue") {
+				$(":root").css({ "--color-red": "#207DFF" });
+			} else if (theme == "green") {
+				$(":root").css({ "--color-red": "#368B85" });
+			} else if (theme == "brown") {
+				$(":root").css({ "--color-red": "#CF7500" });
+			}
+
+			$(document).ready(() => {
+				var value;
+				var icon;
+				var date;
+				var jsonObj = {};
+				var jsonArr = [];
+
+				$(".name").keypress((event) => {
+					var char = String.fromCharCode(event.which);
+					if (!/[a-zA-Z0-9#$]/.test(char)) {
+						event.preventDefault();
+					}
+				});
+
+				$(".next").click(() => {
+					value = $(".name").val();
+					if (value == "") {
+						Msg.error("value is empty", 2000);
+					} else if (icon == undefined) {
+						Msg.error("choose an icon", 2000);
+					} else {
+						if (resArr.length == 0) {
+							$(".name").val("");
+							Msg.info("select the current date or before", 2500);
+							$("#section-create").css({ display: "none" });
+							$("#section-date").css({ display: "block" });
+						} else {
+							resArr.map((res) => {
+								if (res.name == value) {
+									Msg.error("Already in progress", 2000);
+									$(".name").val("");
+								} else {
+									$(".name").val("");
+									Msg.info("select the current date or before", 2500);
+									$("#section-create").css({ display: "none" });
+									$("#section-date").css({ display: "block" });
+								}
+							});
+						}
+					}
+				});
+
+				$(".back").on("click", () => {
+					$("#section-create").css({ display: "block" });
+					$("#section-date").css({ display: "none" });
+				});
+
+				$(".complete").click(() => {
+					jsonArr = JSON.parse(localStorage.getItem("quitArr")) || [];
+					date = $(".rendezvous-input-date").val();
+					var currentDate = new Date().getDate();
+					var choosenDate = new Date(date).getDate();
+					var currentMonth = new Date().getMonth();
+					var choosenMonth = new Date(date).getMonth();
+					var currentYear = new Date().getFullYear();
+					var choosenYear = new Date(date).getFullYear();
+					if (currentYear > choosenYear) {
+						jsonObj = {
+							name: value,
+							icon: icon,
+							date: date
+						};
+						jsonArr.push(jsonObj);
+						localStorage.setItem("quitArr", JSON.stringify(jsonArr));
+						location.href = "./index.html";
+						console.log("no need to check");
+					} else if (currentYear == choosenYear) {
+						if (currentMonth > choosenMonth) {
+							console.log("no need to check");
+							jsonObj = {
+								name: value,
+								icon: icon,
+								date: date
+							};
+							jsonArr.push(jsonObj);
+							localStorage.setItem("quitArr", JSON.stringify(jsonArr));
+							location.href = "./index.html";
+						} else if (currentMonth == choosenMonth) {
+							if (currentDate >= choosenDate) {
+								jsonObj = {
+									name: value,
+									icon: icon,
+									date: date
+								};
+								jsonArr.push(jsonObj);
+								localStorage.setItem("quitArr", JSON.stringify(jsonArr));
+								location.href = "./index.html";
+							} else {
+								Msg.error("Choose the current date or before", 2000);
+							}
+						} else {
+							Msg.error("Choose the current date or before", 2000);
+						}
+					} else {
+						Msg.error("choose the current date or before", 2000);
+					}
+				});
+
+				$(".default").click(() => {
+					icon = "fas fa-biohazard";
+				});
+
+				$(".smoking").click(() => {
+					icon = "fas fa-smoking";
+				});
+
+				$(".alcohol").click(() => {
+					icon = "fas fa-glass-martini-alt";
+				});
+
+				$(".drugs").click(() => {
+					icon = "fas fa-syringe";
+				});
+
+				$(".pills").click(() => {
+					icon = "fas fa-pills";
+				});
+
+				$(".weed").click(() => {
+					icon = "fas fa-cannabis";
+				});
+				$(".porn").click(() => {
+					icon = "fab fa-mixer";
+				});
+
+				$(".video").click(() => {
+					icon = "fas fa-gamepad";
+				});
+
+				$(".tv").click(() => {
+					icon = "fas fa-tv";
+				});
+
+				$(".shopping").click(() => {
+					icon = "fas fa-money-check-alt";
+				});
+
+				$(".facebook").click(() => {
+					icon = "fab fa-facebook";
+				});
+
+				$(".instagram").click(() => {
+					icon = "fab fa-instagram";
+				});
+
+				$(".twitter").click(() => {
+					icon = "fab fa-twitter";
+				});
+
+				$(".fastfood").click(() => {
+					icon = "fas fa-pizza-slice";
+				});
+
+				$(".sugar").click(() => {
+					icon = "fas fa-birthday-cake";
+				});
+
+				$(".soda").click(() => {
+					icon = "fas fa-wine-bottle";
+				});
+
+				$(".coffee").click(() => {
+					icon = "fas fa-coffee";
+				});
+
+				$(".gambling").click(() => {
+					icon = "fas fa-dice";
+				});
+			});
+		</script>
+	</body>
+</html>

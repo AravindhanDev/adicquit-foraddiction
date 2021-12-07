@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+		/>
+		<meta
+			name="AdicQuit"
+			content="AdicQuit is a web application where you can commit to quitting some addiction which is lasted long for years."
+		/>
+		<meta property="og:site_name" content="AdicQuit" />
+		<meta property="og:title" content="Commit to quit addiction" />
+		<meta
+			property="og:description"
+			content="AdicQuit is a web application where you can commit to quitting some addiction which is lasted long for years."
+		/>
+		<meta
+			property="og:image"
+			content="https://st2.depositphotos.com/1041170/7070/v/950/depositphotos_70705413-stock-illustration-addict-man-and-set-of.jpg"
+		/>
+		<title>AdicQuit</title>
+		<link
+			rel="icon"
+			type="image/png"
+			href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnYG9NEOMC6e96MBohit7gGG3y_bre_FbpEQ&usqp=CAU"
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+			integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
+			crossorigin="anonymous"
+		/>
+		<link
+			rel="stylesheet"
+			href="./dist/Minimal-Notification-Plugin-With-jQuery-and-Bootstrap-Bootstrap-Msg/dist/css/bootstrap-msg.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+		/>
+		<link rel="stylesheet" href="./css/style.css" />
+	</head>
+	<body>
+		<nav class="navbar navbar-light bg-light">
+			<div class="container-fluid head">
+				<div class="quotes">
+					<h6 class="text-muted day">Quote of the day</h6>
+					<p class="quote">
+						Yesterday I dared to struggle. Today I dare to win
+					</p>
+					<span class="text-muted author">- Bernadette Devlin</span>
+				</div>
+				<div class="settings dropstart">
+					<a
+						style="color: #777; font-size: 1.1rem"
+						id="navbarDropdown"
+						role="button"
+						data-bs-toggle="dropdown"
+						aria-expanded="false"
+					>
+						<i class="fas fa-ellipsis-v"></i>
+					</a>
+					<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+						<span class="dropdown-item">
+							<i class="fas fa-palette"></i>&nbsp;&nbsp; Change Theme
+						</span>
+						<div class="dropdown-divider"></div>
+						<span class="dropdown-item colors d-flex">
+							<div class="color color1"></div>
+							<div class="color color2"></div>
+							<div class="color color3"></div>
+							<div class="color color4"></div>
+						</span>
+						<div class="dropdown-divider"></div>
+						<span class="dropdown-item genQuotes"
+							><i class="fas fa-quote-left"></i>&nbsp;&nbsp; Generate
+							Quotes</span
+						>
+						<span class="dropdown-item shareQuotes"
+							><i class="fas fa-share-alt"></i>&nbsp;&nbsp; Share The
+							Quote</span
+						>
+					</div>
+				</div>
+			</div>
+			<div class="container mt-3" style="padding-left: 0.9rem">
+				<button class="btn btn-red app">
+					<a style="font-size: 1.6rem" href="create.html">+</a>
+				</button>
+			</div>
+		</nav>
+		<div class="app-head mt-4">I commit to quit:</div>
+		<div class="App">
+			<div class="row appContainer"></div>
+		</div>
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script src="./dist/Smooth-Circle-Chart-Plugin-with-jQuery-CSS3-Circle-Charts/jquery.circlechart.js"></script>
+		<script src="./dist/Minimal-Notification-Plugin-With-jQuery-and-Bootstrap-Bootstrap-Msg/dist/js/bootstrap-msg.js"></script>
+		<script>
+			$(document).ready(() => {
+				var resArr = JSON.parse(localStorage.getItem("quitArr")) || [];
+				console.log(resArr);
+				var i = 0;
+
+				if (resArr.length == 0) {
+					Msg.info("Welcome to AdicQuit, click on + icon to commit", 2500);
+				}
+
+				var quote = $(".quote");
+				var author = $(".author");
+
+				$(".shareQuotes").click(() => {
+					if (navigator.share) {
+						navigator
+							.share({
+								title: "Motivational Quotes",
+								url: "https://google.com"
+							})
+							.then(() => {
+								console.log("Thanks for sharing");
+							})
+							.catch(console.error);
+					} else {
+						console.log("navigator is not available");
+					}
+				});
+
+				$(".genQuotes").click(() => {
+					fetch("https://type.fit/api/quotes")
+						.then((res) => res.json())
+						.then((dataArr) => {
+							var randomNumber = Math.floor(Math.random() * 100);
+							console.log(randomNumber);
+							for (var i = 0; i < 100; i++) {
+								quote.text(dataArr[randomNumber].text);
+								author.text("- 	" + dataArr[randomNumber].author);
+							}
+						});
+				});
+
+				var theme = localStorage.getItem("theme") || "red";
+				localStorage.setItem("theme", theme);
+
+				$(".color1").click(() => {
+					theme = "red";
+					localStorage.setItem("theme", theme);
+					// $(":root").css({ "--color-red": "#fe6367" });
+					location.href = "./index.html";
+				});
+
+				$(".color2").click(() => {
+					theme = "blue";
+					localStorage.setItem("theme", theme);
+					// $(":root").css({ "--color-red": "#344CB7" });
+					location.href = "./index.html";
+				});
+
+				$(".color3").click(() => {
+					theme = "green";
+					localStorage.setItem("theme", theme);
+					// $(":root").css({ "--color-red": "#125C13" });
+					location.href = "./index.html";
+				});
+
+				$(".color4").click(() => {
+					theme = "brown";
+					localStorage.setItem("theme", theme);
+					// $(":root").css({ "--color-red": "#911f27" });
+					location.href = "./index.html";
+				});
+
+				if (theme == "red") {
+					$(":root").css({ "--color-red": "#fe6367" });
+				} else if (theme == "blue") {
+					$(":root").css({ "--color-red": "#207DFF" });
+				} else if (theme == "green") {
+					$(":root").css({ "--color-red": "#368B85" });
+				} else if (theme == "brown") {
+					$(":root").css({ "--color-red": "#CF7500" });
+				}
+
+				resArr.map((arr) => {
+					setInterval(() => {
+						var hours = Math.floor(
+							((new Date().getTime() - new Date(arr.date).getTime()) %
+								(1000 * 60 * 60 * 24)) /
+								(1000 * 60 * 60)
+						);
+
+						var minutes = Math.floor(
+							((new Date().getTime() - new Date(arr.date).getTime()) %
+								(1000 * 60 * 60)) /
+								(1000 * 60)
+						);
+
+						var seconds = Math.floor(
+							((new Date().getTime() - new Date(arr.date).getTime()) %
+								(1000 * 60)) /
+								1000
+						);
+
+						$(".timeProgressSpan").text(`${hours}h ${minutes}m ${seconds}s`);
+					});
+
+					var hours = Math.floor(
+						((new Date().getTime() - new Date(arr.date).getTime()) %
+							(1000 * 60 * 60 * 24)) /
+							(1000 * 60 * 60)
+					);
+
+					var days = Math.floor(
+						(new Date().getTime() - new Date(arr.date).getTime()) /
+							(1000 * 60 * 60 * 24)
+					);
+
+					console.log(days);
+					var expression = `${
+						days < 1
+							? "1 Day"
+							: days < 3
+							? "3 Days"
+							: days < 7
+							? "1 Week"
+							: days < 21
+							? "3 Weeks"
+							: days < 30
+							? "1 Month"
+							: days < 90
+							? "3 Months"
+							: days < 180
+							? "6 Months"
+							: days < 365
+							? "1 Year"
+							: days < 1825
+							? "5 Years"
+							: days < 3650
+							? "10 Years"
+							: "Nothing"
+					}`;
+
+					if (hours < 24 && days < 1) {
+						percent = (hours / 24) * 100;
+					} else if (hours < 72 && days < 3) {
+						percent = ((hours + days * 24) / 72) * 100;
+					} else if (days < 7) {
+						percent = (days / 7) * 100;
+					} else if (days < 21) {
+						percent = (days / 21) * 100;
+					} else if (days < 30) {
+						percent = (days / 30) * 100;
+					} else if (days < 90) {
+						percent = (days / 90) * 100;
+					} else if (days < 180) {
+						percent = (days / 180) * 100;
+					} else if (days < 365) {
+						percent = (days / 365) * 100;
+					} else if (days < 1825) {
+						percent = (days / 1825) * 100;
+					} else if (days < 3650) {
+						percent = (days / 3650) * 100;
+					}
+
+					$(".appContainer").append(
+						`<div class="Box col-xl-3 col-lg-4 col-md-8 animate__animated animate__fadeInUp">
+										<div class="box-header d-flex justify-content-between">
+											<div class="box-left">
+												<div class="icon">
+													<i class="${arr.icon} quitIcon"></i>
+													<span class="quitName p-1 quitName${arr.name}">${arr.name}</span>
+												</div>
+											</div>
+											<div class="box-right">
+												<li class="dropstart sidebar list-unstyled">
+													<a
+														style="color: #777"
+														id="navbarDropdown"
+														role="button"
+														data-bs-toggle="dropdown"
+														aria-expanded="false"
+														>
+														<i class="fas fa-ellipsis-v"></i>
+													</a>
+													<div class="dropdown-menu" aria-labelledby="navbarDropdown">
+														<span class="dropdown-item delete${arr.name}"><i class="far fa-trash-alt"></i>&nbsp;&nbsp; Delete</span>
+													</div>
+												</li>
+											</div>
+										</div>
+										<div class="box-body mt-3 d-flex justify-content-between">
+											<div class="time">
+												<span class="text-muted">Abstinence Time</span>
+												<p class="timeProgress" style="font-weight: 600">
+													${days}d
+													<span class="timeProgressSpan"></span>
+												</p>
+											</div>
+											<div class="chart" style="text-align: center">
+												<div class="demo" data-percent="${percent}"></div>
+												<div class="months">${expression}</div>
+											</div>
+										</div>
+										<div class="box-footer">
+											<i class="fas fa-braille"></i>
+										</div>
+									</div>`
+					);
+
+					$(".delete" + arr.name).click(() => {
+						$(".renameInput").css({ display: "none" });
+						var newName = $(".delete" + arr.name)
+							.parent()
+							.parent()
+							.parent()
+							.siblings()
+							.find(".quitName")
+							.text();
+						console.log(newName);
+						resArr = resArr.filter((res) => {
+							return newName !== res.name;
+						});
+						localStorage.setItem("quitArr", JSON.stringify(resArr));
+						$(".delete" + arr.name)
+							.closest(".Box")
+							.remove();
+					});
+				});
+				var colorTheme = localStorage.getItem("theme") || "red";
+				var color = "";
+				console.log(colorTheme);
+				if (colorTheme == "red") {
+					color = "#fe6367";
+				} else if (colorTheme == "blue") {
+					color = "#207DFF";
+				} else if (colorTheme == "green") {
+					color = "#368B85";
+				} else if (colorTheme == "brown") {
+					color = "#CF7500";
+				}
+				$(".demo").percentcircle({
+					animate: true,
+					diameter: 100,
+					guage: 2,
+					coverBg: "#fff",
+					bgColor: "#efefef",
+					fillColor: color,
+					percentSize: "15px",
+					percentWeight: "normal"
+				});
+			});
+		</script>
+	</body>
+</html>

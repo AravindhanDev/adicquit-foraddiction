@@ -1,0 +1,396 @@
+body {
+	font-family: "Open Sans", sans-serif;
+	background-color: #ecedf1;
+}
+
+:root {
+	--color-red: #fe6367;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #fff;
+}
+
+.navbar {
+	background-color: #fff;
+	box-shadow: 2px 2px 8px #ddd, -2px -2px 8px #ddd;
+	padding-top: 0.9rem;
+}
+
+.navbar-brand {
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+
+.timeProgress {
+	color: #333;
+}
+
+.btn-red {
+	width: 43px;
+	height: 43px;
+	background-color: var(--color-red);
+	color: #fff;
+	border-radius: 50%;
+}
+
+.btn-redbtn {
+	background-color: var(--color-red);
+	color: #fff;
+	font-size: 0.8rem;
+}
+
+.color {
+	width: 1rem;
+	height: 1rem;
+	border-radius: 50%;
+	background-color: #000;
+	margin-left: 1rem;
+}
+
+.color1 {
+	background-color: #fe6367;
+}
+
+.color2 {
+	background-color: #344cb7;
+}
+
+.color3 {
+	background-color: #125c13;
+}
+
+.color4 {
+	background-color: #911f27;
+}
+
+.btn {
+	outline: none !important;
+	box-shadow: none !important;
+}
+
+.btn-red:hover {
+	color: #fff;
+}
+
+.btn-redbtn:hover {
+	color: #fff;
+}
+
+.app {
+	position: absolute;
+	right: 1rem;
+	top: 6.75rem;
+	padding: 0 0.8rem 0;
+	box-shadow: 2px 2px 8px #aaa !important;
+}
+
+.quote {
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.author {
+	font-size: 0.9rem;
+}
+
+.settings {
+	margin-bottom: 3.8rem;
+	padding-right: 1rem;
+}
+
+.head {
+	padding-top: 0.5rem;
+}
+
+.app-head {
+	color: #000;
+	margin: 0.9rem;
+	font-weight: 600;
+	padding-left: 1rem;
+}
+
+.rename-head {
+	color: #000;
+	font-weight: 600;
+	padding-left: 0.1rem;
+}
+
+.renameInput {
+	margin-top: 5rem;
+}
+
+.input-group {
+	padding-top: 1rem;
+}
+
+.col-sm-3half,
+.col-sm-8half {
+	position: relative;
+	min-height: 1px;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+
+.App {
+	padding: 1rem;
+}
+
+.Box {
+	width: 25rem;
+	background-color: #fff;
+	margin: auto 1rem 1.5rem;
+	padding: 1rem;
+	border-radius: 8px;
+	box-shadow: 2px 2px 7px #ccc;
+}
+
+.Box:hover {
+	box-shadow: 2px 2px 7px #ccc, -2px -2px 7px #ddd;
+}
+.gauge-wrap-before,
+.gauge-active {
+	background-color: var(--color-red) !important;
+}
+
+span.perc {
+	color: var(--color-red) !important;
+	font-weight: 800 !important;
+}
+
+.demo {
+	margin-right: 1rem;
+}
+
+#demo {
+	cursor: pointer;
+}
+
+.months {
+	padding-right: 1.1rem;
+	padding-top: 1rem;
+	font-weight: 600;
+	color: #777;
+}
+
+.time {
+	margin-top: 2rem;
+}
+
+.create-head {
+	font-weight: 700;
+}
+
+.header {
+	background-color: #fff;
+	box-shadow: 2px 2px 8px #ddd, -2px -2px 8px #ddd;
+	text-align: center;
+	padding: 1.3rem;
+	width: 100vw;
+	position: fixed;
+	top: 0;
+}
+
+.icon > a {
+	font-size: 3.5rem;
+	color: var(--color-red) !important;
+}
+
+.sidebar > a {
+	font-size: 1rem;
+	color: #333 !important;
+}
+
+.sidebar > div span {
+	font-weight: 600;
+}
+
+.sidebar > div span:hover {
+	background-color: #eee;
+	color: #000;
+}
+
+#select-head {
+	margin-bottom: 7rem;
+	color: #fff;
+}
+
+#select-head-icon {
+	color: #222;
+	margin-bottom: 7rem;
+}
+
+.quitIcon {
+	color: var(--color-red);
+}
+
+#creation {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 17rem;
+	margin: 0 auto;
+	padding-top: 10rem;
+}
+
+input {
+	font-size: 0.8rem;
+}
+
+::placeholder {
+	color: #888;
+	font-size: 0.9rem;
+}
+
+.name {
+	border: none;
+	width: 100%;
+	border-bottom: 2px solid var(--color-red);
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.rename {
+	border: none;
+	width: 100%;
+	border-bottom: 2px solid var(--color-red);
+	border-radius: 0;
+	background-color: transparent;
+}
+
+.name:focus {
+	background-color: transparent;
+	box-shadow: none !important;
+	border-bottom: 2px solid var(--color-red);
+}
+
+.rename:focus {
+	background-color: transparent;
+	box-shadow: none !important;
+	border-bottom: 2px solid var(--color-red);
+}
+
+.footer {
+	background-color: var(--color-red);
+	color: #fff;
+	padding: 1rem;
+	display: flex;
+	justify-content: space-between;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+}
+
+.dropdown-item {
+	font-size: 0.85rem;
+	cursor: pointer;
+}
+
+.dropdown-item:hover {
+	font-size: 0.85rem;
+	cursor: pointer;
+	background-color: #eee;
+	color: #000;
+}
+
+.footer a {
+	font-weight: 600;
+	font-size: 0.9rem;
+	cursor: pointer;
+}
+
+.rendezvous-input-date {
+	border-radius: 50px;
+	background-color: var(--color-red);
+	border: 0;
+	padding: 0.5rem;
+	text-align: center;
+	color: #fff;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+.rendezvous-input-date::placeholder {
+	color: #fff;
+	font-size: 0.8rem;
+}
+
+.rendezvous-input-date:focus {
+	outline: none;
+}
+
+.rendezvous-datepicker-navigation-action {
+	background-color: var(--color-red);
+}
+
+.rendezvous-datepicker-navigation-action:hover {
+	background-color: var(--color-red);
+}
+
+@media all and (max-width: 1350px) {
+	.Box {
+		margin: auto auto 1.2rem;
+	}
+}
+
+@media all and (max-width: 860px) {
+	.Box {
+		margin: auto auto 1.2rem;
+		width: 80%;
+	}
+	body {
+		font-size: 0.9rem;
+	}
+	.navbar {
+		font-size: 0.8rem;
+	}
+	.quotes {
+		width: 17rem;
+	}
+	.app {
+		top: 7rem;
+	}
+}
+
+@media all and (max-width: 600px) {
+	.Box {
+		margin: 0 0 2rem;
+		width: 100%;
+	}
+	body {
+		font-size: 0.9rem;
+	}
+	.navbar {
+		font-size: 0.8rem;
+	}
+	.quotes {
+		width: 17rem;
+	}
+	.app {
+		top: 7rem;
+	}
+	#select-head {
+		margin-bottom: 7rem;
+		margin-right: 12rem;
+		color: #555;
+	}
+
+	.dropend > a {
+		font-size: 3.5rem;
+		color: var(--color-red) !important;
+		margin-right: 15rem !important;
+	}
+	.app-head {
+		padding-left: 0;
+	}
+	.author {
+		font-size: 0.85rem;
+	}
+}
